@@ -21,7 +21,7 @@ module.exports = AppContext.createContext({
       // load the mongodb URL from your APP.config.mongodb
       accessMongo('mongodb')
 
-      // load 2 connections assign them to the default connection and the users connection
+      // load 2 connections and assign them to the default connection and the users connection
       accessMongo({
         default: 'mongodb://localhost/main',
         users: 'mongodb://foo:bar@localhost/users'
