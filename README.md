@@ -21,22 +21,22 @@ module.exports = AppContext.createContext({
       // load the mongodb URL from your APP.config.mongodb
       accessMongo('mongodb')
 
-      // load 2 connections from the APP.config at APP.config.mongodb.centralDB and APP.config.mongodb.users
-      // and assign them to the default connection and the users connection
+      // load 2 connections assign them to the default connection and the users connection
       accessMongo({
-        default: 'mongodb.centralDB',
-        users: 'mongodb.users'
+        default: 'mongodb://localhost/main',
+        users: 'mongodb://foo:bar@localhost/users'
       })
     );
 
     // you can optionally use app-context-access-mongo through app-context-initialize
+    // to create connections from APP.config.mongodb.centralDB and APP.config.mongodb.users
     var initialize = require('app-context-initialize');
     this.use(
       AppContext.RunLevel.Connected,
       initialize({
         'access-mongo': {
-          default: 'mongodb.centralDB',
-          users: 'mongodb.users'
+          default: '$mongodb.centralDB',
+          users: '$mongodb.users'
         }
       })
     );
