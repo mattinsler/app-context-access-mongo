@@ -1,7 +1,7 @@
 {
   "name": "app-context-access-mongo",
   "description": "access-mongo initializer for app-context",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/mattinsler/app-context-access-mongo",
   "repository": {
     "type": "git",
@@ -15,7 +15,7 @@
     "node": ">= 0.10.0"
   },
   "dependencies": {
-    "access-mongo": "^0.1.8"
+    "access-mongo": "^0.1.9"
   },
   "devDependencies": {},
   "keywords": [
